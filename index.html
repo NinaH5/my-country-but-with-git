@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide to Lebanon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+    </div>
+      <header>
+        <div class="logo">Lebanon</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="visit.html">Places to Visit</a></li>
+                <li><a href="food.html">Popular Food</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="herowrapper">
+         <div class="herocard">
+            <h1 id="yup">Discover the <br>Beauty of Lebanon</h1>
+         </div>
+        </div>
+    </div>
+       <p class="intro">A land filled with power and despair, hills, mountains, beaches, anything you want, you can find it easily. Beautiful view with stunning adventures that could all be done in one day. Don't believe me? see for yourself</p>
+    </div>
+    <div class="vid">
+        <iframe width="900" height="455" src="https://www.youtube.com/embed/coIXMyWzpAU?si=WUmcqmfoNRWk6qaP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <button id="btn">click me</button>
+    <script>
+        function change(){
+            document.getElementById("yup").innerHTML="Lebanon is the best!"
+        }
+        document.getElementById("btn").addEventListener("click",change)
+      window.addEventListener("load",function(){
+        document.getElementById("preloader").style.display="none"
+    })
+    </script>
+</body>
+</html>

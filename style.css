@@ -1,0 +1,191 @@
+body{
+    background-color: rgb(255, 220, 220);
+    padding: 20px 20px;
+    font-family: sans-serif;
+}
+header{
+    max-width:1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 25px 0;
+}
+.logo{
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing:1.5px;
+    text-transform: uppercase;
+    color: red;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style:none;
+    gap:28px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgb(102, 102, 102);
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    color:rgb(18, 221, 18);
+    font-weight: 700;
+}
+.herocard{
+    position: relative;
+    width:100%;
+    height: 480px;
+    border-radius: 32px 32px 0 0;
+    background-image: url("https://i.pinimg.com/736x/82/dc/33/82dc338022fe4e611e60ded5b7c350c6.jpg");
+    background-size:cover;
+    background-position: center;
+    clip-path: ellipse(115% 100% at 50% 0%);
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
+    font-size:30px;
+    color:white;
+}
+.herowrapper {
+    position: relative;
+    border-radius: 32px 32px 0 0;
+    background-color: #00a859; /* Cedar Green line color */
+    padding-bottom: 12px; /* Thickness of the green line */
+    clip-path: ellipse(115% 100% at 50% 0%);
+}
+.intro{
+    color: maroon;
+    font-size: 19px;
+    text-align: center;
+}
+
+.vid{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+p{
+    font-size:large;
+    color:maroon;
+}
+h2{
+    color:green;
+    font-weight: bolder;
+    font-size: 30px;
+    width:250px;
+    border: 2px dashed red,
+}
+img{
+    width:400px;
+    height:300px;
+}
+h3{
+    color:green;
+}
+#preloader{
+    background:white url("giphy.gif") no-repeat center center ;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: 100%;
+    z-index:10;
+}
+.flag{
+    display:block;
+    margin:auto;
+    width:500px;
+    border: 6px double green;
+}
+.rating-overlay{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.rating-box{
+    background:white;
+    padding: 30px 40px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width:400px;
+    width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.rating-box h3 {
+    margin-top: 0;
+    color: rgb(141, 7, 7);
+    font-size: 1.3rem;
+}
+.rating-box p{
+    color: rgb(28, 78, 28);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.star {
+    font-size: 2.5rem;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+    transition: transform 02s ease, color 0.2 ease;
+    user-select:none;
+}
+.star.hovered {
+    color:rgb(255, 204, 0);
+}
+.star:hover,
+.star.hovered{
+    transform:scale(1.35);
+}
+.close-btn{
+    position:absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.8 rem;
+    color:  black;
+    cursor:pointer;
+    line-height:1;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.close-btn:hover {
+    color: red;
+    transform: scale(2.15);
+}
+.thank-you-content h3{
+    color: rgb(46, 125, 50);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.thank-you-content p {
+  color: rgb(243, 14, 14);
+  font-size: 1rem;
+  margin: 0;
+}

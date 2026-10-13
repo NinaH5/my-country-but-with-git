@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ratingmodel" class="rating-overlay">
+        <div class="rating-box">
+            <button id="closemodelbtn" class="close-btn" aria-label="close model">&times;</button>
+            <div id="ratingContent">
+            <h3>How are you finding your experience with us?</h3>
+            <p>Please give us a rating:</p>
+            <div class="stars-container" id="starsContainer">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+        </div>
+    <div id="thankyoucontent" class="thank-you-content" style="display:none;">
+        <h3>Thank you!🎉</h3>
+        <p> We will surely take your rating into consideration 🇱🇧🌲</p>
+    </div>
+  </div>
+</div>
+   <header>
+        <div class="logo">Lebanon</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visit.html">Places to Visit</a></li>
+                <li><a href="food.html" class="active">Popular Food</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="herowrapper">
+         <div class="herocard">
+    <h1>Food</h1>
+    </div>
+    </div>
+    <h3>It's a complete waste if you visit and not eat Lebanon's tasty dishes</h3>
+    <img src="https://i.pinimg.com/1200x/5b/f0/36/5bf0368e6a6fc9d8ba0aa34e227efb9b.jpg" alt="Taboule">
+    <h2>Tabouleh:</h2>
+    <p> A refreshing green salad featuring finely chopped parsley, tomatoes, mint, onion, and a small amount of bulgur, dressed with lemon and olive oil.</p>
+    <img src="https://i.pinimg.com/1200x/4a/d0/90/4ad0909d5c6955f393bc922b48979b51.jpg" alt="Manakish">
+    <h2>Manakish:</h2>
+    <p>A popular flatbread often topped with a blend of thyme, sesame seeds, and olive oil, or cheese and more, frequently enjoyed for breakfast</p>
+    <img src="https://i.pinimg.com/736x/b6/2d/36/b62d362ea88261f80e7db50cf14fd038.jpg" alt="Shawarma">
+    <h2>Shawarma:</h2>
+    <p>Thinly sliced marinated chicken or meat roasted on a rotating spit and wrapped in flatbread with garlic sauce. Best food in the world!</p>
+    <img src="https://i.pinimg.com/736x/60/c1/81/60c1816ea3f95da83c9cb3cea0c85b94.jpg" alt="Kibbeh">
+    <h2>Kibbeh:</h2>
+    <p>A savory dish made of bulgur and minced meat mixed with spices, shaped into balls or trays and baked or fried.</p>
+    <img src="https://i.pinimg.com/736x/a4/17/e3/a417e3072fc16b92bbe64f34709f005f.jpg" alt="Fatoush">
+    <h2>Fatoush</h2>
+    <p>: A crunchy garden salad mixed with fresh vegetables and crisp toasted pita pieces.</p>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const ratingmodel=document.getElementById("ratingmodel");
+            const starsContainer= document.getElementById("starsContainer");
+            const stars= starsContainer.querySelectorAll(".star");
+            const ratingContent= document.getElementById("ratingContent");
+            const thankyoucontent = document.getElementById("thankyoucontent");
+            const closemodelbtn = document.getElementById("closemodelbtn");
+            const closemodel =()=>{
+                ratingmodel.styleopacity='0';
+                setTimeout(()=>{
+                    ratingmodel.style.display="none";
+                }, 300);
+            };
+            stars.forEach((star,index)=>{
+                star.addEventListener('mouseenter', ()=>{
+                    stars.forEach((s, i)=>{
+                        if (i <= index){
+                            s.classList.add('hovered');
+                        } else{
+                            s.classList.remove('hovered');
+                        }
+                    });
+                });
+           star.addEventListener("click",()=>{
+            const rating= star.getAttribute('data-value');
+            console.log("User rated: ${rating} star(s)");
+            ratingContent.style.display="none";
+            thankyoucontent.style.display="block";
+            });
+           });
+        starsContainer.addEventListener('mouseleave',()=>{
+            stars.forEach((s)=>s.classList.remove('hovered'));
+         });
+        closemodelbtn.addEventListener("click",()=>{
+            closemodel();
+        });
+        });
+    </script>
+</body>
+</html>
